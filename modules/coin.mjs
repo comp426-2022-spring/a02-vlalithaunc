@@ -75,17 +75,17 @@ export function countFlips(array) {
         numTails++;
     }
   }
-  if(numHeads == 0 && numTails == 0){
-    return "{}";
-  }
-  else if(numHeads == 0){
-    return "{tails: " + numTails.toString() + " }";
+  // if(numHeads == 0 && numTails == 0){
+  //   return "{}";
+  // } else
+  if(numHeads == 0){
+    return "{ tails: " + numTails.toString() + " }";
   }
   else if(numTails == 0){
-    return "{heads: " + numHeads.toString() + " }";
+    return "{ heads: " + numHeads.toString() + " }";
   }
   else{
-    return "{tails: " + numTails.toString() + ", heads: " + numHeads.toString() + " }";
+    return "{ tails: " + numTails.toString() + ", heads: " + numHeads.toString() + " }";
   }
 }
 
