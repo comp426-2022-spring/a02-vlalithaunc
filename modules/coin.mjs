@@ -40,9 +40,16 @@ export function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
-
+export function coinFlips(flips) {
+  const sides = [];
+  for(var i = 0; i < flips; i++){
+      sides[i] = coinFlip();
+  }
+  return sides
 }
+
+// testing:
+// console.log(coinFlips(10))
 
 /** Count multiple flips
  * 
@@ -57,9 +64,32 @@ function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
-
+export function countFlips(array) {
+  var numHeads = 0;
+  var numTails = 0;
+  for(var i = 0; i < array.length; i++){
+    if(array[i] == "heads"){
+        numHeads++;
+    }
+    else if(array[i] == "tails"){
+        numTails++;
+    }
+  }
+  if(numHeads == 0 && numTails == 0){
+    return "{tails: " + ", heads: " + "}";
+  }
+  else if(numHeads == 0){
+    return "{tails: " + numTails.toString() + ", heads: " + "}";
+  }
+  else if(numTails == 0){
+    return "{tails: " + ", heads: " + numHeads.toString() + "}";
+  }
+  else{
+    return "{tails: " + numTails.toString() + ", heads: " + numHeads.toString() + "}";
+  }
 }
+
+//console.log(countFlips(coinFlips(10)))
 
 /** Flip a coin!
  * 
@@ -72,10 +102,20 @@ function countFlips(array) {
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {
-
+export function flipACoin(call) {
+  var flip = coinFlip();
+  const results = ['win', 'lose'];
+  var result = "";
+  if(flip == call){
+    result = results[0];
+  }
+  else{
+    result = results[1];
+  }
+  return "{ call: " + call + ", flip: " + flip + ", result: " + result + "}";
 }
 
+//console.log(flipACoin(coinFlip()))
 
 /** Export 
  * 
