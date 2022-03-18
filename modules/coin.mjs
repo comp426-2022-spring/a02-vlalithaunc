@@ -112,7 +112,7 @@ export function flipACoin(call) {
   else{
     result = results[1];
   }
-  return "{ call: " + call + ", flip: " + flip + ", result: " + result + "}";
+  return "{ call: " + call + ", flip: " + flip + ", result: " + result + " }";
 }
 
 //console.log(flipACoin(coinFlip()))
