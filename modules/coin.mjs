@@ -76,7 +76,7 @@ export function countFlips(array) {
     }
   }
   if(numHeads == 0 && numTails == 0){
-    return null;
+    return "{ }";
   }
   else if(numHeads == 0){
     return "{tails: " + numTails.toString() + " }";

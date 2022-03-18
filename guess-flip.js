@@ -7,7 +7,12 @@ const require = createRequire(import.meta.url);
 
 const args = require('minimist')(process.argv.slice(2));
 
-console.log(flipACoin(args.call));
+if(args.call == null){
+    throw new Error("no input");
+}
+else{
+    console.log(flipACoin(args.call));
+}
 
 
 
