@@ -76,16 +76,16 @@ export function countFlips(array) {
     }
   }
   if(numHeads == 0 && numTails == 0){
-    return "{tails: " + ", heads: " + "}";
+    return null;
   }
   else if(numHeads == 0){
-    return "{tails: " + numTails.toString() + ", heads: " + "}";
+    return "{tails: " + numTails.toString() + " }";
   }
   else if(numTails == 0){
-    return "{tails: " + ", heads: " + numHeads.toString() + "}";
+    return "{heads: " + numHeads.toString() + " }";
   }
   else{
-    return "{tails: " + numTails.toString() + ", heads: " + numHeads.toString() + "}";
+    return "{tails: " + numTails.toString() + ", heads: " + numHeads.toString() + " }";
   }
 }
 
