@@ -11,8 +11,11 @@ const err_null = new Error("Error: no input.\nUsage: node guess-flip --call=[hea
 
 const err_incorrect = new Error("Usage: node guess-flip --call=[heads|tails]");
 
-if(args.call == null || !(args.call == 'heads' || args.call == 'tails')){
+if(args.call == null){
     console.error(err_null.message);
+}
+else if(args.call != "heads" && args.call != "tails"){
+    console.error(err_incorrect.message);
 }
 else{
     console.log(flipACoin(args.call));
