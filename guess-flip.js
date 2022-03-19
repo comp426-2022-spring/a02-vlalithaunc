@@ -15,7 +15,7 @@ if(args.call == null){
     console.error(err_null.message);
 }
 else if(args.call != "heads" && args.call != "tails"){
-    console.error(err_incorrect.message);
+    console.error(err_null.message);
 }
 else{
     console.log(flipACoin(args.call));
