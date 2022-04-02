@@ -22,7 +22,7 @@
   "homepage": "https://github.com/comp426-2022-spring/a02-vlalithaunc#readme",
   "dependencies": {
     "bash": "^0.0.1",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "yargs": "^17.3.1"
   }
 }
